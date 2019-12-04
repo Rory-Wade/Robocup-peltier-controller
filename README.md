@@ -1,4 +1,4 @@
-# PELTIER CONTROL UNITS
+# PELTIER CONTROL UNITS (Australian Units)
 
 ## 1.	POWER
 The units are powered through a 2.5mm DC jack with a positive center. Input tolerance is 10V – 14V 5A. 
