@@ -1,2 +1,25 @@
-# Robocup-peltier-controller
-The Arduino code to run the Robocup International Australia Junior Rescue B heated victim controllers
+### Peltier Control Units - Manual for Australian Units
+
+1. 1.Power
+
+The units are powered through a 2.5mm DC jack with a positive center. Input tolerance is 10V – 14V 5A.
+
+1.
+  1. A.Powering On
+    1. i.On unit power up the device should blink a white (or blue on V1) LED and have a solid blue LED.
+    2. ii.A dim blue LED or a non-flashing white LED is an indication of not having appropriate amount of power.
+  2. B.Reset
+    1. i.The device can be reset by pushing a small object into the reset hole on the case. The device should flask the LED once the reset is complete.
+2. 2.Connections
+
+The device has 5 independent Peltier control ports comprised of a screw terminal and 2 pin plug connector. The Peltier wires should be connected such that the warm side of the Peltier is facing the thermistor. The thermistor should also be plugged into the appropriate 2 pin connector.
+
+1. 3.operation
+
+Each Peltier port is controlled via a the a dip switch. Although the devices can power up to 5 peltries, only 4 should be used at a single time. This allows for &quot;Dummy&quot; victims to be setup. Care should be taken to monitor the flashing LED. In the event that it in solid on or off the device should be reset.
+
+NOTE: the device allows for 5 Peltiers to be running but will make the device unstable and prone to browning out in an on state. 4 peltries should be on at a single time.
+
+1. 4.Modifying Temperatures
+
+A serial head is provided with on the PCB to interface with the devices at a board rate of 9600. The header is a standard interface of the DFR0164. The protocol can be discovered by sending the character &quot;?&quot;. The options give the ability to modify select and global offsets for all Peltier devices. Allowing for the used to add, subtract and set the temperatures.
